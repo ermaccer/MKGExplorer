@@ -121,8 +121,9 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -151,13 +152,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="code\geo.h" />
+    <ClInclude Include="code\image.h" />
+    <ClInclude Include="code\MKGExplorer.h" />
+    <ClInclude Include="core\App.h" />
+    <ClInclude Include="core\FileFunctions.h" />
+    <ClInclude Include="core\IniReader.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="MKGExplorer.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MKGExplorer.cpp" />
+    <ClCompile Include="code\image.cpp" />
+    <ClCompile Include="code\MKGExplorer.cpp" />
+    <ClCompile Include="core\App.cpp" />
+    <ClCompile Include="core\FileFunctions.cpp" />
+    <ClCompile Include="core\IniReader.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MKGExplorer.rc" />
